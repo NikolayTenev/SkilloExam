@@ -2,8 +2,6 @@ package WebTesting;
 
 import factory.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -14,44 +12,28 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class LogoutTest  {
-
-        ChromeDriver webDriver;
+public class LogoutTest extends TestObject {
 
 
-        @BeforeMethod(alwaysRun = true)
-        public void beforeTest() {
-            WebDriverManager.chromedriver().setup();
-            webDriver = new ChromeDriver();
-            webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
-            webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        }
-
-        @AfterMethod(alwaysRun = true)
-        public void afterTest() {
-            if (webDriver != null) {
-                webDriver.close();
-            }
-        }
 
         @DataProvider(name = "getUser")
         public Object[][] getUsers() {
             return new Object[][]{
-                    {"Nikito123.", "Qwerty123", "5532"}
+                    {"Nikito123.", "Qwerty123"}
             };
         }
 
-        @Test(dataProvider = "getUser")
-        public void loginTest(String username, String password, String userId) {
-            webDriver.manage().window().maximize();
-//            String homeUrl = "http://training.skillo-bg.com:4200/posts/all";
+        @Test(dataProvider = "getUser", groups = "smoke")
+        public void loginTest(String username, String password) {
 
 
-            HomePage homePage = new HomePage(webDriver);
-            Header header = new Header(webDriver);
-            LoginPage loginPage = new LoginPage(webDriver);
-            ProfilePage profilePage = new ProfilePage(webDriver);
-            LogoutPage logoutPage = new LogoutPage(webDriver);
+
+
+            HomePage homePage = new HomePage(getWebDriver());
+            Header header = new Header(getWebDriver());
+            LoginPage loginPage = new LoginPage(getWebDriver());
+
+            LogoutPage logoutPage = new LogoutPage(getWebDriver());
 
             homePage.navigateTo();
             Assert.assertTrue(homePage.isUrlLoaded(), "Home page is not loaded.");

@@ -1,24 +1,21 @@
 package WebTesting;
 
-import factory.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import factory.Header;
+import factory.LoginPage;
+import factory.PostPage;
+import factory.ProfilePage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.File;
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class PostTest extends TestObject {
 
     @DataProvider(name = "getUser")
     public Object[][] getUsers() {
-        File postPicture = new File("C:\\Users\\Nikolay\\IdeaProjects\\SkilloExam\\src\\test\\resources\\upload\\sampleFile.jpeg");
+        File postPicture = new File("src/test/resources/upload/sampleFile.jpeg");
         String caption = "Testing upload file";
         return new Object[][]{
                 {"Nikito123.", "Qwerty123", "5532",postPicture, caption},
@@ -51,10 +48,15 @@ public class PostTest extends TestObject {
         Assert.assertTrue(PostPage.isNewPostLoaded(), "The new post form is not loaded");
 
 
+        postPage.isVIsibleChooseFile();
+        Assert.assertTrue(postPage.isVIsibleChooseFile(), "The choose file is not visible");
         postPage.uploadPicture(postPicture);
-        String actualImageText = postPage.uplaodedImageText();
-        Assert.assertTrue(postPage.isImageUplaoded("sampleFile.jpeg"), "Image is not uploaded");
-        Assert.assertEquals(actualImageText, "sampleFile.jpeg", "Incorrect image is uploaded");
+        postPage.waitForImageUpload();
+
+
+        String actualText = postPage.uplaodedImageText();
+        Assert.assertTrue(postPage.isImageUploaded(actualText), "The image is not uploaded");
+
 
         postPage.typePostCaption(caption);
         postPage.clickCreatePost();

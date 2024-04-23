@@ -1,6 +1,5 @@
 package factory;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,24 +9,29 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoginPage {
-    public static final String PAGE_URL = "http://training.skillo-bg.com:4200/users/login";
+public class LogoutPage {
+    public static final String PAGE_URL = "http://training.skillo-bg.com:4200/posts/all";
+    private final WebDriver webDriver;
 
-    public final WebDriver webDriver;
-    @FindBy(id = "defaultLoginFormUsername" )
+    @FindBy(id = "defaultLoginFormUsername")
     private WebElement userNameTextField;
 
     @FindBy(id = "defaultLoginFormPassword")
-    private  WebElement passwordTextField;
+    private WebElement passwordTextField;
     @FindBy(xpath = "//*[@class='remember-me']/input[@type='checkbox']")
-    private  WebElement rememberMeCheckBox;
+    private WebElement rememberMeCheckBox;
 
     @FindBy(id = "sign-in-button")
-    private  WebElement signUpButton;
+    private WebElement signUpButton;
 
-    public LoginPage(WebDriver driver) {
-        this.webDriver = driver;
-        PageFactory.initElements(driver, this);
+
+    @FindBy(xpath = "//*[@class='fas fa-sign-out-alt fa-lg']")
+    private WebElement downArrow;
+
+
+    public LogoutPage(WebDriver webDriver) {
+        this.webDriver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
 
 
@@ -59,13 +63,18 @@ public class LoginPage {
         return rememberMeCheckBox.isSelected();
     }
 
-    public void clickSignUpButton(){
+    public void clickSignUpButton() {
         WebDriverWait wait = new WebDriverWait(this.webDriver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(signUpButton));
         signUpButton.click();
+    }
+
+    public void clickOnDownArrow() {
+        this.downArrow.click();
     }
 
     public void navigateTo() {
         this.webDriver.get(PAGE_URL);
     }
 }
+

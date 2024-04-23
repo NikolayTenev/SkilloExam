@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>MyFirstTestClass</artifactId>
+    <artifactId>SkilloExam</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
 
@@ -20,31 +20,24 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
+                    <configuration>
+                        <source>11</source>
+                        <target>11</target>
+                    </configuration>
                 </plugin>
                 <plugin>
-                    <groupId>org.apache.maven.surefire</groupId>
-                    <artifactId>naven-surefire-plugin</artifactId>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M7</version>
                     <configuration>
-                        <suitXmlFiles>
-                            <suitXmlFile>testng.xml</suitXmlFile>
-                        </suitXmlFiles>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                        <reportsDirectory>src/test/resources/reports</reportsDirectory>
                     </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>21</source>
-                    <target>21</target>
-                    <compilerArgs>--enable-preview</compilerArgs>
-                </configuration>
-            </plugin>
-
-        </plugins>
     </build>
 
 
@@ -74,14 +67,10 @@
             <scope>test</scope>
         </dependency>
 
-
-
         <dependency>
             <groupId>org.apache.maven.reporting</groupId>
             <artifactId>maven-reporting-impl</artifactId>
             <version>4.0.0-M13</version>
         </dependency>
-
-
     </dependencies>
 </project>

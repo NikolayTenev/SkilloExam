@@ -1,21 +1,18 @@
 package factory;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LogoutPage {
-    public static final String PAGE_URL = "http://training.skillo-bg.com:4200/posts/all";
-    private final WebDriver webDriver;
+public class LoginPage {
+    public static final String PAGE_URL = "http://training.skillo-bg.com:4200/users/login";
+
+    public final WebDriver webDriver;
 
     @FindBy(id = "defaultLoginFormUsername" )
     private WebElement userNameTextField;
@@ -28,18 +25,16 @@ public class LogoutPage {
     @FindBy(id = "sign-in-button")
     private  WebElement signUpButton;
 
+    @FindBy(xpath = "//*[@class='toast-message ng-star-inserted']")
+    public   WebElement successMessage;
 
-//    @FindBy(id = "sign-out-button")
-//    private  WebElement logoutButton;
 
     @FindBy(xpath = "//*[@class='fas fa-sign-out-alt fa-lg']")
-    private WebElement downArrow;
+    public WebElement downArrow;
 
-
-
-    public LogoutPage(WebDriver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    public LoginPage(WebDriver driver) {
+        this.webDriver = driver;
+        PageFactory.initElements(driver, this);
     }
 
 
@@ -77,17 +72,9 @@ public class LogoutPage {
         signUpButton.click();
     }
 
+
+
     public void navigateTo() {
         this.webDriver.get(PAGE_URL);
-    }
-
-//    public void clickLogoutButton() {
-//        WebDriverWait wait = new WebDriverWait(this.webDriver, Duration.ofSeconds(15));
-//        wait.until(ExpectedConditions.elementToBeClickable(logoutButton));
-//        logoutButton.click();
-//    }
-
-    public void clickOnDownArrow() {
-        this.downArrow.click();
     }
 }

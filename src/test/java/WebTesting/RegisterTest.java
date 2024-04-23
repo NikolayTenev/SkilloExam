@@ -1,10 +1,8 @@
 package WebTesting;
 
 import factory.*;
-import factory.Header;
-import factory.HomePage;
-import factory.RegisterPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -12,47 +10,31 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
-public class RegisterTest {
-    ChromeDriver webDriver;
+public class RegisterTest extends TestObject {
 
-
-    @BeforeMethod(alwaysRun = true)
-    public void beforeTest() {
-        WebDriverManager.chromedriver().setup();
-        webDriver = new ChromeDriver();
-        webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-    }
-
-    @AfterMethod(alwaysRun = true)
-    public void afterTest() {
-        if (webDriver != null) {
-            webDriver.close();
-        }
-    }
 
     @DataProvider(name = "getUser")
     public Object[][] getUsers() {
         return new Object[][]{
-                {"Nikito123.","abb@abb.bb","Qwerty123", "Qwerty123"}
+                {generateAlphabeticString(5,10),generateRandomEmail(5,10),password, password}
         };
     }
 
-    @Test(dataProvider = "getUser")
+    String password = generateAlphabeticString(5,10);
+
+    @Test(dataProvider = "getUser", groups = "smoke")
     public void registerTest(String userNameRegister, String email, String password, String confirmPassword) {
-        webDriver.manage().window().maximize();
 
 
 
-        HomePage homePage = new HomePage(webDriver);
-        Header header = new Header(webDriver);
-        LoginPage loginPage = new LoginPage(webDriver);
-        RegisterPage registerPage = new RegisterPage(webDriver);
-        ProfilePage profilePage = new ProfilePage(webDriver);
+
+        HomePage homePage = new HomePage(getWebDriver());
+        Header header = new Header(getWebDriver());
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        RegisterPage registerPage = new RegisterPage(getWebDriver());
+        ProfilePage profilePage = new ProfilePage(getWebDriver());
 
 
         homePage.navigateTo();
@@ -78,4 +60,13 @@ public class RegisterTest {
         Assert.assertTrue(profilePage.isUrlLoaded(), "Current page is not profile page");
 
     }
+
+    private String generateRandomEmail(int minLenghtInclusive, int maxLenghtInclusive) {
+        return generateAlphabeticString(minLenghtInclusive, maxLenghtInclusive) + "@gmail.com";
+    }
+
+    private String generateAlphabeticString(int minLenghtInclusive, int maxLenghtInclusive) {
+        return RandomStringUtils.randomAlphanumeric(minLenghtInclusive, maxLenghtInclusive);
+    }
+
 }
