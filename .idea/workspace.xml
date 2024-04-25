@@ -5,26 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbc9fcfd-ce01-4b7f-9e1f-a6056b333514" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factory/PostPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WebTesting/FolowPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebTesting/FollowPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/LogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/LogoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/PostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/PostPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smoke.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WebTesting/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebTesting/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WebTesting/LogoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebTesting/LogoutTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WebTesting/PostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebTesting/PostTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WebTesting/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebTesting/RegisterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WebTesting/TestObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebTesting/TestObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/FolowPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/FolowPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/LogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/LogoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/PostPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/ProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factory/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WebTesting/TestClassGroups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/2024-04-23T19-09-25_848-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/2024-04-23T19-09-25_848-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,54 +50,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG.C:/Users/Nikolay/SkilloExam/src/test/java/WebTesting/follow_testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.C:/Users/Nikolay/SkilloExam/src/test/java/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.C:/Users/Nikolay/SkilloExam/src/test/resources/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.Follow.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.FollowPostTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.FollowPostTest.testCreatePost.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.Folow.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.FolowPostTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.FolowPostTest.testCreatePost.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginTest.loginTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LogoutTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LogoutTest.loginTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LogoutTest.logoutTest.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.PostTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PostTest.testCreatePost.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.RegisterTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RegisterTest.loginTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RegisterTest.registerTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.Smoke.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestClass.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestClassGroups.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.follow.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.moke.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.smoke.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Nikolay/SkilloExam/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nikolay/SkilloExam/src/test/java/WebTesting&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Nikolay/IdeaProjects/SkilloExam/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.C:/Users/Nikolay/SkilloExam/src/test/java/WebTesting/follow_testng.xml.executor": "Run",
+    "TestNG.C:/Users/Nikolay/SkilloExam/src/test/java/testng.xml.executor": "Run",
+    "TestNG.C:/Users/Nikolay/SkilloExam/src/test/resources/testng.xml.executor": "Run",
+    "TestNG.C:/Users/Nikolay/SkilloExam/testng.xml.executor": "Run",
+    "TestNG.Follow.executor": "Run",
+    "TestNG.FollowPostTest.executor": "Run",
+    "TestNG.FollowPostTest.testCreatePost.executor": "Run",
+    "TestNG.Folow.executor": "Run",
+    "TestNG.FolowPostTest.executor": "Run",
+    "TestNG.FolowPostTest.testCreatePost.executor": "Run",
+    "TestNG.GroupTesting.LoginTest.executor": "Run",
+    "TestNG.LoginTest.executor": "Run",
+    "TestNG.LoginTest.loginTest.executor": "Run",
+    "TestNG.LogoutTest.executor": "Run",
+    "TestNG.LogoutTest.loginTest.executor": "Run",
+    "TestNG.LogoutTest.logoutTest.executor": "Debug",
+    "TestNG.ParallelTests.executor": "Run",
+    "TestNG.PostTest.executor": "Run",
+    "TestNG.PostTest.testCreatePost.executor": "Debug",
+    "TestNG.RegisterTest.executor": "Run",
+    "TestNG.RegisterTest.loginTest.executor": "Run",
+    "TestNG.RegisterTest.registerTest.executor": "Run",
+    "TestNG.Smoke.executor": "Run",
+    "TestNG.TestClass.executor": "Run",
+    "TestNG.TestClassGroups.executor": "Run",
+    "TestNG.follow.executor": "Run",
+    "TestNG.moke.executor": "Run",
+    "TestNG.smoke.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Nikolay/SkilloExam/src/test/java",
+    "last_opened_file_path": "C:/Users/Nikolay/SkilloExam/src/test/java/WebTesting",
+    "onboarding.tips.debug.path": "C:/Users/Nikolay/IdeaProjects/SkilloExam/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Nikolay\SkilloExam\src\test\java\WebTesting" />
       <recent name="C:\Users\Nikolay\SkilloExam\src\main\factory" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nikolay\SkilloExam\target" />
       <recent name="C:\Users\Nikolay\SkilloExam\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -110,7 +109,7 @@
       <recent name="WebTesting" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestClassGroups">
+  <component name="RunManager">
     <configuration name="FollowPostTest.testCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SkilloExam" />
       <extension name="coverage">
@@ -122,6 +121,24 @@
       <option name="PACKAGE_NAME" value="WebTesting" />
       <option name="MAIN_CLASS_NAME" value="WebTesting.FollowPostTest" />
       <option name="METHOD_NAME" value="testCreatePost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupTesting.LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SkilloExam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WebTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="WebTesting" />
+      <option name="MAIN_CLASS_NAME" value="WebTesting.GroupTesting" />
+      <option name="METHOD_NAME" value="LoginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -157,24 +174,6 @@
       <option name="PACKAGE_NAME" value="WebTesting" />
       <option name="MAIN_CLASS_NAME" value="WebTesting.LogoutTest" />
       <option name="METHOD_NAME" value="loginTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogoutTest.logoutTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SkilloExam" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="WebTesting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="WebTesting" />
-      <option name="MAIN_CLASS_NAME" value="WebTesting.LogoutTest" />
-      <option name="METHOD_NAME" value="logoutTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -220,19 +219,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.smoke" />
+      <item itemvalue="TestNG.GroupTesting.LoginTest" />
       <item itemvalue="TestNG.TestClassGroups" />
       <item itemvalue="TestNG.FollowPostTest.testCreatePost" />
       <item itemvalue="TestNG.LogoutTest" />
       <item itemvalue="TestNG.LogoutTest.loginTest" />
-      <item itemvalue="TestNG.LogoutTest.logoutTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupTesting.LoginTest" />
         <item itemvalue="TestNG.TestClassGroups" />
         <item itemvalue="TestNG.FollowPostTest.testCreatePost" />
         <item itemvalue="TestNG.LogoutTest.loginTest" />
         <item itemvalue="TestNG.LogoutTest" />
-        <item itemvalue="TestNG.LogoutTest.logoutTest" />
       </list>
     </recent_temporary>
   </component>

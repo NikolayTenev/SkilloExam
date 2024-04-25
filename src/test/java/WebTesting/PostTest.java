@@ -62,5 +62,9 @@ public class PostTest extends TestObject {
         postPage.clickCreatePost();
 
         Assert.assertTrue(profilePage.isUrlLoaded(userId), "Current page is not profile page for " + userId);
+
+        postPage.isPicturePostVisible();
+        Assert.assertTrue(postPage.isPicturePostVisible(), "The post is not visible");
+
     }
 }

@@ -28,6 +28,9 @@ public class LogoutPage {
     @FindBy(xpath = "//*[@class='fas fa-sign-out-alt fa-lg']")
     private WebElement downArrow;
 
+    @FindBy(xpath = "//form[p[text()=\"Sign in\"]]\n")
+    private WebElement LoginForm;
+
 
     public LogoutPage(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -71,6 +74,10 @@ public class LogoutPage {
 
     public void clickOnDownArrow() {
         this.downArrow.click();
+    }
+
+    public boolean isLoginFormVisible() {
+        return LoginForm.isDisplayed();
     }
 
     public void navigateTo() {

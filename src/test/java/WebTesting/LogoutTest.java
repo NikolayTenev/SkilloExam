@@ -23,7 +23,7 @@ public class LogoutTest extends TestObject {
             };
         }
 
-        @Test(dataProvider = "getUser", groups = "smoke")
+        @Test(dataProvider = "getUser", groups = "TestGroupA")
         public void loginTest(String username, String password) {
 
 
@@ -61,6 +61,8 @@ public class LogoutTest extends TestObject {
             loginPage.isUrlLoaded();
             Assert.assertTrue(loginPage.isUrlLoaded(), "Current page is not profile page");
 
+            logoutPage.isLoginFormVisible();
+            Assert.assertTrue(logoutPage.isLoginFormVisible(), "Login form is not visible");
 
         }
     }

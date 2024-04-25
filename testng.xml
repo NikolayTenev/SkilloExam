@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.og/testng-1.0.dtd" >
+
+<suite name="SkilloExam" verbose="1">
+    <test name="Login Test">
+        <classes>
+            <class name="WebTesting.LoginTest"></class>
+        </classes>
+    </test>
+    <test name="Logout Tests">
+        <classes>
+            <class name="WebTesting.LogoutTest"></class>
+        </classes>
+    </test>
+    <test name="Register Tests">
+        <classes>
+            <class name="WebTesting.RegisterTest"></class>
+        </classes>
+    </test>
+</suite>

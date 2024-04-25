@@ -24,7 +24,7 @@ public class RegisterTest extends TestObject {
 
     String password = generateAlphabeticString(5,10);
 
-    @Test(dataProvider = "getUser", groups = "smoke")
+    @Test(dataProvider = "getUser", groups = "TestGroupA")
     public void registerTest(String userNameRegister, String email, String password, String confirmPassword) {
 
 
@@ -58,6 +58,8 @@ public class RegisterTest extends TestObject {
 
         profilePage.isUrlLoaded();
         Assert.assertTrue(profilePage.isUrlLoaded(), "Current page is not profile page");
+
+        Assert.assertTrue(loginPage.downArrow.isDisplayed(), "Down arrow is not displayed.");
 
     }
 

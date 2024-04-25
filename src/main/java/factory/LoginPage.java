@@ -32,6 +32,9 @@ public class LoginPage {
     @FindBy(xpath = "//*[@class='fas fa-sign-out-alt fa-lg']")
     public WebElement downArrow;
 
+    @FindBy(id = "nav-link-new-post")
+    public WebElement newPostLink;
+
     public LoginPage(WebDriver driver) {
         this.webDriver = driver;
         PageFactory.initElements(driver, this);
@@ -70,6 +73,10 @@ public class LoginPage {
         WebDriverWait wait = new WebDriverWait(this.webDriver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(signUpButton));
         signUpButton.click();
+    }
+
+    public boolean isNewPostVisible() {
+        return newPostLink.isDisplayed();
     }
 
 

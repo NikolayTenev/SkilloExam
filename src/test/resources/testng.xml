@@ -1,9 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-
-<suite name="Web Testing suite" verbose="1">
-    <test name="smoke">
-        <classes>
-            <class name="WebTesting.TestClassGroups"></class>
-        </classes>
-    </test>
-</suite>

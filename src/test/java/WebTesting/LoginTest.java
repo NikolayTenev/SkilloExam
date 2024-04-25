@@ -25,7 +25,7 @@ public class LoginTest extends TestObject {
         };
     }
 
-    @Test(dataProvider = "getUser",groups = "smoke")
+    @Test(dataProvider = "getUser",groups = "TestGroupA")
     public void loginTest(String username, String password, String userId) {
 
 
@@ -56,15 +56,16 @@ public class LoginTest extends TestObject {
 
         Assert.assertTrue(loginPage.successMessage.isDisplayed(), "Login failed.");
 
-        Assert.assertTrue(loginPage.downArrow.isDisplayed(), "Down arrow is not displayed.");
 
         header.clickProfile();
 
         profilePage.isUrlLoaded(userId);
-
-
         Assert.assertTrue(profilePage.isUrlLoaded(userId), "Current page is not profile page for " + userId);
 
+        Assert.assertTrue(loginPage.downArrow.isDisplayed(), "Down arrow is not displayed.");
+
+        loginPage.isNewPostVisible();
+        Assert.assertTrue(loginPage.newPostLink.isDisplayed(), "New Post link is not displayed.");
 
     }
 }

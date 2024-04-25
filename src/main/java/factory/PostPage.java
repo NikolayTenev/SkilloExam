@@ -35,6 +35,10 @@ public class PostPage {
     @FindBy(id = "choose-file")
     private WebElement chooseFile;
 
+
+    @FindBy(xpath ="//app-post[@class='col-4 app-post ng-star-inserted']//img\n")
+    private WebElement picturePost;
+
     public PostPage(WebDriver driver) {
         this.webDriver = driver;
         PageFactory.initElements(webDriver, this);
@@ -82,4 +86,12 @@ public static boolean isNewPostLoaded() {
         wait.until(ExpectedConditions.visibilityOf(uploadPictureText));
     }
 
-}
+
+    public boolean isPicturePostVisible() {
+        picturePost.isDisplayed();
+        return true;
+    }
+
+    }
+
+
